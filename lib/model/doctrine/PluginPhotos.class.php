@@ -16,7 +16,8 @@ abstract class PluginPhotos extends BasePhotos
   {
     return (bool) $this->getIsDefault();
   }
-  public function  save(Doctrine_Connection $conn = null) {
+  public function  save(Doctrine_Connection $conn = null)
+	{
         parent::save($conn);
         $filename = $this->getPicpath();
         $ext = explode(".", $filename);
@@ -27,6 +28,17 @@ abstract class PluginPhotos extends BasePhotos
         $img->resize(null,50);
         $img->setQuality(50);
         $img->saveAs(sfConfig::get("sf_upload_dir").'/gallery/thumbnail/50_'.$filename, 'image/'.$ext);
-
   }
+	
+	public function delete(Doctrine_Connection $conn = null)
+	{
+		parent::delete($conn);
+		
+		$filename = $this->getPicpath();
+		$thumbnail = 'thumbnail/50_'.$filename;
+		
+		chdir(sfConfig::get("sf_upload_dir")."/gallery/");
+		if (is_file($filename)) { unlink($filename); }
+		if (is_file($thumbnail)) { unlink($thumbnail); }
+	}
 }

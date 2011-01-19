@@ -35,8 +35,8 @@ class galleryActions extends autoGalleryActions {
 
         /*****************************************************************/
 
-        $file = $request->getParameter("qqfile");
-        if(isset($result["success"])){
+        $file = $result["success"];
+        if($file != ""){
             $photo = new Photos();
             $photo->setGalleryId($this->gallery->getId());
             $photo->setPicPath($file);
@@ -235,7 +235,7 @@ class galleryActions extends autoGalleryActions {
                 }
 
                 if ($this->file->save($uploadDirectory . $filename . '.' . $ext)){
-                    return array('success'=>true);
+                    return array('success' => $filename.'.'.$ext);
                 } else {
                     return array('error'=> 'Could not save uploaded file.' .
                         'The upload was cancelled, or server error encountered');
