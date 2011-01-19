@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           gallery
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          gallery
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:        { label: Date de création, date_format: dd/MM/yyyy }
+        updated_at:        { label: Date de modification, date_format: dd/MM/yyyy }
+        title:             { label: Nom }
+        description:       { label: Description }
+      list:
+        title:             Les galeries
+        display:           [=id, =title]
+      filter:  ~
+      form:    ~
+      edit:
+        title:             Modifier une galerie
+        display:
+          "Galerie":       [id, title, description]
+          "Photos":        [_photoUpload]
+      new:
+        title:             Créer une galerie
+        display:
+          "Galerie":       [id, title, description]

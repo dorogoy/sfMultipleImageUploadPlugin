@@ -1,0 +1,30 @@
+Gallery:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+      unique: true
+  columns:
+    title:
+      type : string(255)
+    description:
+      type : string(255)
+
+Photos:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+      unique: true
+  columns:
+    title:
+      type : string(255)
+    picpath:
+      type : string(255)
+    casa_id: # modificar
+      type : integer(8)
+    is_default:     { type: boolean, default: false }
+  relations:
+    Casa:
+      local: casa_id # modificar
+      onDelete: CASCADE

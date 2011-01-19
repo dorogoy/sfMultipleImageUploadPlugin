@@ -1,0 +1,125 @@
+/* 
+    Document   : photos
+    Created on : 7 oct. 2010, 16:30:56
+    Author     : leny
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.clear{
+    clear:both;
+}
+
+.picture{
+    float: left;
+    padding: 10px;
+    height: 80px;
+    margin: 5px 0;
+    background: none;
+}
+
+.actions{
+    display: none;
+}
+
+.picture img.basic{
+    height: 50px;
+    max-width:100px;
+}
+
+#default{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/default.png) no-repeat;
+}
+#default:hover{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/default_hover.png) no-repeat;
+}
+
+#pictures_list{
+    clear: both;
+}
+
+#content-inner	{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto 0px auto;
+    padding: 25px 0 30px 0;
+}
+#gallery_content	{
+    font-size: 0px;
+    line-height: 0px;
+    min-height: 300px;
+}
+#gallery_content-table th.sized	{
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin: 0;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+
+#gallery_content-table-inner	{
+    font-size: 12px;
+    line-height: 12px;
+    padding: 10px 0 20px 0;
+}
+#gallery_tbl-border-top,.tbl-border-top	{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/border_bit.jpg) top repeat-x;
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+#gallery_tbl-border-bottom,.tbl-border-bottom	{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/border_bit.jpg) bottom repeat-x;
+    line-height: 0;font-size: 0px;
+    height: 15px;
+}
+#gallery_tbl-border-left,.tbl-border-left	{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/border_bit.jpg) left repeat-y;
+}
+#gallery_tbl-border-right,.tbl-border-right	{
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/border_bit.jpg) right repeat-y;
+}
+#gallery_table-content	{
+    line-height: 16px;
+    margin: 0 10px 10px 10px;
+}
+
+.gallery_topleft {
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/corner_top_left.jpg) no-repeat;
+    width:15px;
+    height:15px;
+
+}
+.gallery_topright {
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/corner_top_right.jpg) no-repeat;
+    width:15px;
+    height:15px;
+
+}
+
+.bottomleft {
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/corner_bottom_left.jpg)  no-repeat;
+    width:15px;
+    height:15px;
+
+}
+.bottomright {
+    background: url(/sfMultipleAjaxUploadGalleryPlugin/images/corner_bottom_right.jpg)  no-repeat;
+    width:15px;
+    height:15px;
+
+}
+#sf_admin_container #pictures_list table{
+    border-collapse: inherit;
+}
+
+#sf_admin_container #pictures_list td,#sf_admin_container #pictures_list th{
+    border: 0;
+    padding: 0;
+}

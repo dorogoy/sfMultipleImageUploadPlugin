@@ -1,0 +1,66 @@
+/************************************************************************************************************************
+ * sfMultipleAjaxUploadGalleryPlugin											*
+ * EN :															*
+ *     This plugin generates a gallery management module with an ajax multiple photo uploader.				*
+ *     Internationalization supports (En - Fr)										*
+*************************************************************************************************************************/
+/************************************************************************************************************************
+* Requirements														*
+* 	To manipulate pictures, you have to install on your server the GD library or imagemagick			*
+*************************************************************************************************************************/
+__________________________________________________________________________________________________________________________
+/*************************************************************************************************************************
+* TUTORIAL : you can get a screencast here : http://www.vimeo.com/sisko/sfMultipleAjaxUploadGalleryPlugin                *
+*	   you can follow the instructions below                                                                         *
+*	   you can follow the instructions in my website :                                                               *
+*	   http://www.leny-bernard.com/en/blog/show/sfMultipleAjaxUploadGalleryPlugin                                    *
+**************************************************************************************************************************/
+
+EN:
+Installation: ____________________________________________________________
+
+In order to install the plugin sfMultipleAjaxUploadGalleryPlugin
+
+	Type one of these symfony commands :
+
+		plugin:install sfMultipleAjaxUploadGalleryPlugin
+					OR
+		plugin:install http://www.leny-bernard.com/uploads/plugins/sfMultipleAjaxUploadGalleryPlugin.zip
+					OR
+		Download the file http://www.leny-bernard.com/uploads/plugins/sfMultipleAjaxUploadGalleryPlugin.zip
+		Then extract its content in the plugins directory of your project
+		then type plugin:install sfMultipleAjaxUploadGalleryPlugin
+
+Get the plugin's resources by typing : 
+	symfony publish-assets
+Then clear the cache
+	symfony cc
+
+A last task to do is to enable the gallery and photos modules (backend) and the portfolio module (frontend) in the settings.yml specific app config's folder.
+/apps/backend/settings.yml
+You have to enter if it doesn't already exist this line
+	
+	all:  
+	  .settings:
+	    enabled_modules: [gallery, photos]
+
+If it does exists, you just have to add in the list the gallery module like below :
+
+ 	all:  
+	  .settings:
+	    enabled_modules: [myOthersModule, gallery, photos]
+
+/apps/frontend/settings.yml
+same procedure that before
+	all:  
+	  .settings:
+	    enabled_modules: [portfolio]
+----------- or -----
+
+ 	all:  
+	  .settings:
+	    enabled_modules: [myOthersModule, portfolio]
+
+You can now access to the gallery and get its awesome functionnalities.
+The plugin use an extern library (GD is set by default but you can totally use imagemagick instead) in order to save your photos in 4 widths {50px, 150px, 300px, orignal size} and copy the thumbnail in the /uploads/gallery/thumbnail directory, automatically created
+if your upload directory, defined by the symfony configuration sf_upload_dir is different that the default one (/upload), you juste have to create the "thumbnail" dir in the correct directory. 

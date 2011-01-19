@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           photos
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          photos
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Les photos !
+        layout: stacked
+        display: [is_default,gallery,picpath]
+        params:  |
+          %%is_default%% <small>%%casa%%</small> %%title%% <img title="%%title%%" src="../uploads/casa/thumbnail/50_%%picpath%%" style="max-height:50px"/>
+      filter:
+        display:
+          [title,picpath]
+      form:
+        class : PluginBackendPhotosForm
+      edit:    ~
+      new:     ~

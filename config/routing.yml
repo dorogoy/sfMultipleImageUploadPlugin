@@ -1,0 +1,56 @@
+gallery:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                gallery
+    module:               gallery
+    prefix_path:          /gallery
+    column:               id
+    with_wildcard_routes: true
+
+photo_ajax_default:
+  url:     /photo/:id/default
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: casa, action: ajaxPhotoDefault }
+  requirements:
+    sf_method: [post]
+
+photo_ajax_delete:
+  url:     /photo/:id/delete
+  class:   sfDoctrineRoute
+  options: { model: Photos, type: object }
+  param:   { module: casa, action: ajaxPhotoDelete }
+  requirements:
+    sf_method: [post]
+
+gallery_ajax_photo_liste:
+  url:     /casa/:id/list
+  class:   sfDoctrineRoute
+  options: { model: Casa, type: object }
+  param:   { module: casa, action: ajaxPhotoListe }
+  requirements:
+    sf_method: [post]
+
+gallery_upload:
+  url:     /casa/upload
+  param:   { module: casa, action: upload}
+
+photos:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                photos
+    module:               photos
+    prefix_path:          /photos
+    column:               id
+    with_wildcard_routes: true
+#FRONTEND SIDE - portfolios
+showGallery:
+  url:      /portfolio/:slug
+  class:    sfDoctrineRoute
+  options:  { model: gallery, type: object }
+  param:    { module: portfolio, action: show }
+listPortfolio:
+  url:      /portfolios
+  class:    sfDoctrineRoute
+  options:  { model: gallery, type: object }
+  param:    { module: portfolio, action: index }
