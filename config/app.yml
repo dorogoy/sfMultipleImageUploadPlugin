@@ -1,6 +1,5 @@
 all:
   sfImageTransformPlugin:
-    module: casa # sfConfig::get('app_sfImageTransformPlugin_module')
     default_adapter: GD #, ImageMagick
     default_image:
       mime_type: image/png

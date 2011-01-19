@@ -11,7 +11,7 @@ photo_ajax_default:
   url:     /photo/:id/default
   class:   sfDoctrineRoute
   options: { model: Photos, type: object }
-  param:   { module: casa, action: ajaxPhotoDefault }
+  param:   { module: gallery, action: ajaxPhotoDefault }
   requirements:
     sf_method: [post]
 
@@ -19,21 +19,21 @@ photo_ajax_delete:
   url:     /photo/:id/delete
   class:   sfDoctrineRoute
   options: { model: Photos, type: object }
-  param:   { module: casa, action: ajaxPhotoDelete }
+  param:   { module: gallery, action: ajaxPhotoDelete }
   requirements:
     sf_method: [post]
 
 gallery_ajax_photo_liste:
-  url:     /casa/:id/list
+  url:     /gallery/:id/list
   class:   sfDoctrineRoute
-  options: { model: Casa, type: object }
-  param:   { module: casa, action: ajaxPhotoListe }
+  options: { model: Gallery, type: object }
+  param:   { module: gallery, action: ajaxPhotoListe }
   requirements:
     sf_method: [post]
 
 gallery_upload:
-  url:     /casa/upload
-  param:   { module: casa, action: upload}
+  url:     /gallery/upload
+  param:   { module: gallery, action: upload}
 
 photos:
   class: sfDoctrineRouteCollection

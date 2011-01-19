@@ -21,10 +21,15 @@ Photos:
       type : string(255)
     picpath:
       type : string(255)
-    casa_id: # modificar
+    seitic_id:
+      type : integer(8)
+    gallery_id:
       type : integer(8)
     is_default:     { type: boolean, default: false }
   relations:
-    Casa:
-      local: casa_id # modificar
+    Casa: # modificar
+      local: seitic_id
+      onDelete: CASCADE
+    Gallery:
+      local: gallery_id
       onDelete: CASCADE
