@@ -1,4 +1,4 @@
-<?php use_stylesheet("../sfMultipleAjaxUploadGalleryPlugin/css/photos.css") ?>
+<?php use_stylesheet("../sfMultipleAjaxUploadPlugin/css/photos.css") ?>
 <script>
     function titlize(id){
         $('.editable').hide();
@@ -57,9 +57,9 @@
                           <div class="actions">
                             <?php if(!$photo->getIsDefault()): ?>
 
-                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_default', $photo) ?>')" class="default"><img src="/sfMultipleAjaxUploadGalleryPlugin/images/starrize.png" align="left" title="Utiliser cette image comme photo de couverture" /></a>
-                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_delete', $photo) ?>')" class="delete"><img src="/sfMultipleAjaxUploadGalleryPlugin/images/trash.png" align="left" title="Supprimer"/></a>
-                            <img onclick="titlize('<?php echo $photo->getId(); ?>_editable');" src="/sfMultipleAjaxUploadGalleryPlugin/images/titlize.png" align="left" title="Modifier le titre"/>
+                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_default', $photo) ?>')" class="default"><img src="/sfMultipleAjaxUploadPlugin/images/starrize.png" align="left" title="Utiliser cette image comme photo de couverture" /></a>
+                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_delete', $photo) ?>')" class="delete"><img src="/sfMultipleAjaxUploadPlugin/images/trash.png" align="left" title="Supprimer"/></a>
+                            <img onclick="titlize('<?php echo $photo->getId(); ?>_editable');" src="/sfMultipleAjaxUploadPlugin/images/titlize.png" align="left" title="Modifier le titre"/>
                             <?php endif; ?>
                           </div>
                         </div>

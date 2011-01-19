@@ -47,12 +47,12 @@
 .qq-upload-fail .qq-upload-failed-text {display:inline;}
 
 #status.success, #status.loading{
-    background: url('/sfMultipleAjaxUploadGalleryPlugin/images/gallery_success.png') no-repeat;
+    background: url('/sfMultipleAjaxUploadPlugin/images/gallery_success.png') no-repeat;
     width: 16px;
     height: 16px;
     position: absolute;
     margin-left: -20px;
 }
 #status.loading{
-    background: url('/sfMultipleAjaxUploadGalleryPlugin/images/gallery_loading.gif') no-repeat;
+    background: url('/sfMultipleAjaxUploadPlugin/images/gallery_loading.gif') no-repeat;
 }
