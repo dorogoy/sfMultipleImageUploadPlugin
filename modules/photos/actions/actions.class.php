@@ -20,7 +20,8 @@ class photosActions extends autoPhotosActions
             $photo = Doctrine::getTable('photos')->find($id);
             $photo->setTitle($title);
             $photo->save();
-            return $this->renderText('¡La foto se modificó correctamente!');
+						
+						return $this->renderPartial('photos/notification');
         }
     }
 }

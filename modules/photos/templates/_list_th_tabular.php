@@ -1,3 +1,4 @@
+<?php use_helper('I18N') ?>
 <?php slot('sf_admin.current_header') ?>
 <th class="sf_admin_boolean sf_admin_list_th_is_default">
     <p style="font-size: 0em"><?php if ('is_default' == $sort[0]): ?>

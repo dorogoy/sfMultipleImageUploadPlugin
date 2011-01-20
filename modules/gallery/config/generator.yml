@@ -14,21 +14,21 @@ generator:
     config:
       actions: ~
       fields:
-        created_at:        { label: Date de création, date_format: dd/MM/yyyy }
-        updated_at:        { label: Date de modification, date_format: dd/MM/yyyy }
-        title:             { label: Nom }
+        created_at:        { label: Created at, date_format: dd/MM/yyyy }
+        updated_at:        { label: Updated at, date_format: dd/MM/yyyy }
+        title:             { label: Name }
         description:       { label: Description }
       list:
-        title:             Les galeries
+        title:             Image galleries
         display:           [=id, =title]
       filter:  ~
       form:    ~
       edit:
-        title:             Modifier une galerie
+        title:             Update a gallery
         display:
           "Galerie":       [id, title, description]
           "Photos":        [_photoUpload]
       new:
-        title:             Créer une galerie
+        title:             New gallery
         display:
           "Galerie":       [id, title, description]

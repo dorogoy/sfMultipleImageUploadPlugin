@@ -1,9 +1,10 @@
+<?php use_helper('I18N') ?>
 <?php use_javascript("../sfMultipleAjaxUploadPlugin/js/jquery/jquery-1.4.4.js") ?>
 <div id="pictures_list" class="sf_admin_form_row">
   <?php include_partial('gallery/photoListe', array('photos' => $form->getObject()->getPhotos())) ?>
 </div>
 <?php use_stylesheet("../sfMultipleAjaxUploadPlugin/css/fileuploader.css") ?>
-<div id="upload"><?php echo __('Ajouter des images') ?></div>
+<div id="upload"><?php echo __('Add pictures') ?></div>
 <!--List Files-->
 <ul id="files" ></ul>
 <div class="clear"></div>
@@ -55,7 +56,7 @@
 
   $('div.actions a.delete').live('click', function(event) {
     event.preventDefault();
-    if(confirm('Etes vous sur de vouloir supprimer cette photo ?')) {
+    if(confirm('<?php echo __('Are you sure you want to delete this photo?') ?>')) {
       $.post(
         $(this).attr('href'),
         { },

@@ -1,4 +1,5 @@
 <?php use_stylesheet("../sfMultipleAjaxUploadPlugin/css/photos.css") ?>
+<?php use_helper('I18N') ?>
 <script>
     function titlize(id){
         $('.editable').hide();
@@ -52,27 +53,27 @@
                     <?php if($photos->count() > 0): ?>
                         <?php foreach( $photos as $i=>$photo ): ?>
                         <div id="photo-<?php echo $photo->getId()?>" class="picture"  onclick="$(this).find('.actions').toggle();" onmouseover="$(this).find('.actions').show();" onmouseout="$(this).find('.actions').hide();">
-                            <?php if($photo->getIsDefault()){ ?> <div id="default" title="Cette photo est l'image utilisée pour la couverture de la galerie"></div><?php } ?>
+                            <?php if($photo->getIsDefault()){ ?> <div id="default" title="<?php echo __('This picture is the image used for the gallery cover') ?>"></div><?php } ?>
                             <img class="basic" src="/uploads/gallery/thumbnail/50_<?php echo $photo->getPicpath(); ?>"/>
                           <div class="actions">
                             <?php if(!$photo->getIsDefault()): ?>
 
-                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_default', $photo) ?>')" class="default"><img src="/sfMultipleAjaxUploadPlugin/images/starrize.png" align="left" title="Utiliser cette image comme photo de couverture" /></a>
-                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_delete', $photo) ?>')" class="delete"><img src="/sfMultipleAjaxUploadPlugin/images/trash.png" align="left" title="Supprimer"/></a>
-                            <img onclick="titlize('<?php echo $photo->getId(); ?>_editable');" src="/sfMultipleAjaxUploadPlugin/images/titlize.png" align="left" title="Modifier le titre"/>
+                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_default', $photo) ?>')" class="default"><img src="/sfMultipleAjaxUploadPlugin/images/starrize.png" align="left" title="<?php echo __('Use this picture as a cover photo') ?>" /></a>
+                            <a href="#" onclick="ajaxPhotoEdition('<?php echo url_for('photo_ajax_delete', $photo) ?>')" class="delete"><img src="/sfMultipleAjaxUploadPlugin/images/trash.png" align="left" title="<?php echo __('Delete') ?>"/></a>
+                            <img onclick="titlize('<?php echo $photo->getId(); ?>_editable');" src="/sfMultipleAjaxUploadPlugin/images/titlize.png" align="left" title="<?php echo __('Update the title') ?>"/>
                             <?php endif; ?>
                           </div>
                         </div>
                     <div style="background: none repeat scroll 0 0 #F3F3F3; border: 1px dashed #5D5D5D; clear: both; display: none; margin-top: 15px; padding: 5px;" id="<?php echo $photo->getId(); ?>_editable" class="editable">
                         <div style="float: right"><img class="basic" src="/uploads/gallery/thumbnail/50_<?php echo $photo->getPicpath(); ?>"/></div>
-                        <p>Indiquez la description pour l'image sélectionnée</p>
+                        <p><?php echo __('Enter a description for the selected image') ?></p>
                         <input id="<?php echo $photo->getId()."_value" ?>" type="textarea" value="<?php echo $photo->getTitle() ?>"/>
                         <input onclick="saveTitle(<?php echo $photo->getId();?>)" type="button" value="OK"/></div>
                     
                         <?php endforeach; ?>
                         <div class="clear"></div>
                         <?php else: ?>
-                        <p>Aucune photo pour l'instant.</p>
+                        <p>No photo yet.</p>
                         <?php endif; ?>
                 </div>
                 <!--  end table-content  -->
