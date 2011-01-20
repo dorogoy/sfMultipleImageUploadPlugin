@@ -38,10 +38,10 @@ abstract class PluginGallery extends BaseGallery {
     }
 
     public static function getAllGalleries(){
-        return Doctrine::getTable('gallery')->createQuery('a')->execute();
+        return $this->createQuery('a')->execute();
     }
     public static function getNbGalleries($nb = 0){
-        return Doctrine_Query::create()->from('gallery')->orderBy('updated_at DESC')
+        return $this->orderBy('updated_at DESC')
         ->limit($nb)
         ->execute();
     }

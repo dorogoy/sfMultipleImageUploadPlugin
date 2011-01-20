@@ -19,7 +19,7 @@ generator:
         layout: stacked
         display: [is_default,gallery,picpath]
         params:  |
-          %%is_default%% <small>%%casa%%</small> %%title%% <img title="%%title%%" src="../uploads/gallery/thumbnail/50_%%picpath%%" style="max-height:50px"/>
+          %%is_default%% <small>%%gallery_id%%</small> %%title%% <img title="%%title%%" src="../uploads/gallery/thumbnail/50_%%picpath%%" style="max-height:50px"/>
       filter:
         display:
           [title,picpath]
