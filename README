@@ -1,45 +1,50 @@
-#sfMultipleImageUploadPlugin
-========
-This plugin generates a gallery management module with an ajax multiple photo uploader.
-Internationalization supports (En - Fr)
+sfMultipleImageUploadPlugin
+===========================
 
+This Symfony plugin is a modification of the [sfMultipleAjaxUploadGalleryPlugin](http://www.leny-bernard.com/en/blog/show/sfMultipleImageUploadPlugin) by Leny Bernard. It generates a gallery management module in the backend with an ajax multiple photo uploader.
 
-* Requirements														
+The sfMultipleImageUploadPlugin features are:
 
-1. To manipulate pictures, you have to install on your server the GD library or imagemagick
+* A gallery can be attached to any module.
+* The plugin builds only a thumbnail (not three) and has no frontend module.
+* The image management has been improved.
+	* The changed name of duplicated images is stored in the database.
+	* Deleting an image deletes his thumbnail as well.
+* Added spanish translation.
 
+Internationalization supports
+-----------------------------
 
-* Tutorial : 
+en, fr, es
 
-1. you can watch a screencast here : [Video](http://vimeo.com/17367486 "Video")
+Requirements
+------------
 
-2. you can follow the instructions below
-3. you can follow the instructions in my website :                                                               http://www.leny-bernard.com/en/blog/show/sfMultipleImageUploadPlugin                                    
+To manipulate pictures, you have to install on your server the GD library or imagemagick
 
+Installation
+------------
 
-## Installation: 
-In order to install the plugin sfMultipleImageUploadPlugin :
-Type one of these symfony commands :
+In order to install the plugin sfMultipleImageUploadPlugin
 
-		plugin:install sfMultipleImageUploadPlugin
+	Download from GitHub, either with git or the package
 
-OR
+Add in config/ProjectConfiguration.class.php the line:
 
-Download the file [here](http://www.leny-bernard.com/uploads/plugins/sfMultipleImageUploadPlugin.zip "download the archive")
+	$this->enablePlugins('sfMultipleImageUploadPlugin');
 
-Then extract its content in the plugins directory of your project :
+Get the plugin's resources by typing:
+ 
+	$ php symfony plugin:publish-assets
 
-		plugin:install sfMultipleImageUploadPlugin
+Then clear the cache
 
-Get the plugin's resources by typing :
+	$ php symfony cc
 
-		symfony publish-assets
-Then clear the cache :
+Enable the gallery and photos module in the backend (or whatever you named it).
 
-		symfony cc
+	/apps/backend/settings.yml
 
-A last task to do is to enable the gallery and photos modules (backend) and the portfolio module (frontend) in the settings.yml specific app config's folder.
-/apps/backend/settings.yml
 You have to enter if it doesn't already exist this line
 	
 	all:  
@@ -52,21 +57,8 @@ If it does exists, you just have to add in the list the gallery module like belo
 	  .settings:
 	    enabled_modules: [myOthersModule, gallery, photos]
 
-/apps/frontend/settings.yml
-same procedure that before
-	all:  
-	  .settings:
-	    enabled_modules: [portfolio]
------------ or -----
-
- 	all:  
-	  .settings:
-	    enabled_modules: [myOthersModule, portfolio]
-
 You can now access to the gallery and get its awesome functionnalities.
-The plugin use an extern library (GD is set by default but you can totally use imagemagick instead) in order to save your photos in 4 widths 
-{50px, 150px, 300px, orignal size} and copy the thumbnail in the /uploads/gallery/thumbnail directory, automatically created if your upload directory, defined by the symfony configuration sf_upload_dir is different that the default one (/upload), you juste have to create the "thumbnail" dir in the correct directory.
+The plugin use an extern library (GD is set by default but you can totally use imagemagick instead) in order to save your photos in 4 widths {50px, 150px, 300px, orignal size} and copy the thumbnail in the /uploads/gallery/thumbnail directory, automatically created
+if your upload directory, defined by the symfony configuration sf_upload_dir is different that the default one (/upload), you juste have to create the "thumbnail" dir in the correct directory.
 
-![alt text](http://www.operationcaribou.com/uploads/thumbnail/50_DSCN8144.JPG "50")
-![alt text](http://www.operationcaribou.com/uploads/thumbnail/150_DSCN8144.JPG "150")
-![alt text](http://www.operationcaribou.com/uploads/thumbnail/300_DSCN8144.JPG "300")
+[TO-DO: Add explanation about attaching a gallery to another module]
