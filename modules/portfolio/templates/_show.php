@@ -8,7 +8,7 @@
     width:160px;
 }
 #controls .ss-controls .play,#controls .ss-controls .pause,#controls .nav-controls .next,#controls .nav-controls .prev{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/play.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/play.png") no-repeat scroll 0 0 transparent;
     display:block;
     height:50px;
     width:50px;
@@ -16,27 +16,27 @@
     position:absolute;
 }
 #controls .ss-controls .pause{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/pause.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/pause.png") no-repeat scroll 0 0 transparent;
 }
 #controls .nav-controls .next{
     margin-left:160px;
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/next.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/next.png") no-repeat scroll 0 0 transparent;
 }
 #controls .nav-controls .prev{
     margin-left:40px;
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/previous.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/previous.png") no-repeat scroll 0 0 transparent;
 }
 #controls .ss-controls .play:hover{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/play-hover.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/play-hover.png") no-repeat scroll 0 0 transparent;
 }
 #controls .ss-controls .pause:hover{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/pause-hover.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/pause-hover.png") no-repeat scroll 0 0 transparent;
 }
 #controls .nav-controls .next:hover{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/next-hover.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/next-hover.png") no-repeat scroll 0 0 transparent;
 }
 #controls .nav-controls .prev:hover{
-    background:url("/sfMultipleAjaxUploadPlugin/images/controls/previous-hover.png") no-repeat scroll 0 0 transparent;
+    background:url("/sfMultipleImageUploadPlugin/images/controls/previous-hover.png") no-repeat scroll 0 0 transparent;
 }
 </style>
 

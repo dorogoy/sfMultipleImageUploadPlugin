@@ -14,14 +14,14 @@ default:
 
   stylesheets:    [main.css ]
 
-  javascripts:    [../sfMultipleAjaxUploadPlugin/js/jquery/jquery-1.3.2.js, ../sfMultipleAjaxUploadPlugin/js/galleriffic/galleriffic.js, ../sfMultipleAjaxUploadPlugin/js/galleriffic/opacityrollover.js]
+  javascripts:    [../sfMultipleImageUploadPlugin/js/jquery/jquery-1.3.2.js, ../sfMultipleImageUploadPlugin/js/galleriffic/galleriffic.js, ../sfMultipleImageUploadPlugin/js/galleriffic/opacityrollover.js]
 
 
   has_layout:     true
   layout:         layout
 
 showSuccess:
-  stylesheets: [../sfMultipleAjaxUploadPlugin/css/galleriffic/jush.css]
-  javascripts: [../sfMultipleAjaxUploadPlugin/js/galleryInstance]
+  stylesheets: [../sfMultipleImageUploadPlugin/css/galleriffic/jush.css]
+  javascripts: [../sfMultipleImageUploadPlugin/js/galleryInstance]
   has_layout:     true
   layout:         layout

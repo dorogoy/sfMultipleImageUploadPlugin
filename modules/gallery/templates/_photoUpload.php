@@ -1,14 +1,14 @@
 <?php use_helper('I18N') ?>
-<?php use_javascript("../sfMultipleAjaxUploadPlugin/js/jquery/jquery-1.4.4.js") ?>
+<?php use_javascript("../sfMultipleImageUploadPlugin/js/jquery/jquery-1.4.4.js") ?>
 <div id="pictures_list" class="sf_admin_form_row">
   <?php include_partial('gallery/photoListe', array('photos' => $form->getObject()->getPhotos())) ?>
 </div>
-<?php use_stylesheet("../sfMultipleAjaxUploadPlugin/css/fileuploader.css") ?>
+<?php use_stylesheet("../sfMultipleImageUploadPlugin/css/fileuploader.css") ?>
 <div id="upload"><?php echo __('Add pictures') ?></div>
 <!--List Files-->
 <ul id="files" ></ul>
 <div class="clear"></div>
-<?php use_javascript("../sfMultipleAjaxUploadPlugin/js/fileuploader.js") ?>
+<?php use_javascript("../sfMultipleImageUploadPlugin/js/fileuploader.js") ?>
 <script>
     function createUploader(){
     var uploader = new qq.FileUploader({

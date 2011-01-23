@@ -1,5 +1,5 @@
 /************************************************************************************************************************
- * sfMultipleAjaxUploadPlugin											*
+ * sfMultipleImageUploadPlugin											*
  * FR :															*
  *     Ce plugin génère un module de gestion de galeries avec un uploader multiple de photos.				*
  *     Support de l'internationalisation ( EN - FR)									*
@@ -11,10 +11,10 @@
 __________________________________________________________________________________________________________________________
 /*************************************************************************************************************************
 * TUTORIEL : vous pourrez bientôt suivre le screencast (vidéo) ici : 							 *
-*	http://www.vimeo.com/sisko/sfMultipleAjaxUploadPlugin 							 *
+*	http://www.vimeo.com/sisko/sfMultipleImageUploadPlugin 							 *
 * 	   vous pouvez suivre les instructions ci-dessous.								 *
 * 	   Vous pouvez suivre les instructions et poser vos questions ici :						 *
-* 	http://www.leny-bernard.com/fr/blog/show/sfMultipleAjaxUploadPlugin							 *
+* 	http://www.leny-bernard.com/fr/blog/show/sfMultipleImageUploadPlugin							 *
 **************************************************************************************************************************/
 
 FR:
@@ -22,13 +22,13 @@ Installation: ____________________________________________________________
 
 Pour installer le plugin, tapez une de ces deux commandes :
 
-		plugin:install sfMultipleAjaxUploadPlugin
+		plugin:install sfMultipleImageUploadPlugin
 					OR
-		plugin:install http://http://www.leny-bernard.com/uploads/plugins/sfMultipleAjaxUploadPlugin
+		plugin:install http://http://www.leny-bernard.com/uploads/plugins/sfMultipleImageUploadPlugin
 					OR
-		Téléchargez le fichier http://www.leny-bernard.com/uploads/plugins/sfMultipleAjaxUploadPlugin.zip
+		Téléchargez le fichier http://www.leny-bernard.com/uploads/plugins/sfMultipleImageUploadPlugin.zip
 		Puis décompréssez le dans le répertoire plugins de votre projet
-		enfin tapez dans la console symfony plugin:install sfMultipleAjaxUploadPlugin
+		enfin tapez dans la console symfony plugin:install sfMultipleImageUploadPlugin
 
 Récuperez les ressources du plugin en tapant : 
 	symfony publish-assets

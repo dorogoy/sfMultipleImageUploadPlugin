@@ -1,4 +1,4 @@
-#sfMultipleAjaxUploadPlugin
+#sfMultipleImageUploadPlugin
 ========
 This plugin generates a gallery management module with an ajax multiple photo uploader.
 Internationalization supports (En - Fr)
@@ -14,22 +14,22 @@ Internationalization supports (En - Fr)
 1. you can watch a screencast here : [Video](http://vimeo.com/17367486 "Video")
 
 2. you can follow the instructions below
-3. you can follow the instructions in my website :                                                               http://www.leny-bernard.com/en/blog/show/sfMultipleAjaxUploadPlugin                                    
+3. you can follow the instructions in my website :                                                               http://www.leny-bernard.com/en/blog/show/sfMultipleImageUploadPlugin                                    
 
 
 ## Installation: 
-In order to install the plugin sfMultipleAjaxUploadPlugin :
+In order to install the plugin sfMultipleImageUploadPlugin :
 Type one of these symfony commands :
 
-		plugin:install sfMultipleAjaxUploadPlugin
+		plugin:install sfMultipleImageUploadPlugin
 
 OR
 
-Download the file [here](http://www.leny-bernard.com/uploads/plugins/sfMultipleAjaxUploadPlugin.zip "download the archive")
+Download the file [here](http://www.leny-bernard.com/uploads/plugins/sfMultipleImageUploadPlugin.zip "download the archive")
 
 Then extract its content in the plugins directory of your project :
 
-		plugin:install sfMultipleAjaxUploadPlugin
+		plugin:install sfMultipleImageUploadPlugin
 
 Get the plugin's resources by typing :
 
