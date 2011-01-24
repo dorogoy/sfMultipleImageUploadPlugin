@@ -43,14 +43,3 @@ photos:
     prefix_path:          /photos
     column:               id
     with_wildcard_routes: true
-#FRONTEND SIDE - portfolios
-showGallery:
-  url:      /portfolio/:slug
-  class:    sfDoctrineRoute
-  options:  { model: gallery, type: object }
-  param:    { module: portfolio, action: show }
-listPortfolio:
-  url:      /portfolios
-  class:    sfDoctrineRoute
-  options:  { model: gallery, type: object }
-  param:    { module: portfolio, action: index }

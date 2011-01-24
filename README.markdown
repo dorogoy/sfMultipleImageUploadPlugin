@@ -6,11 +6,22 @@ This Symfony plugin is a modification of the [sfMultipleAjaxUploadGalleryPlugin]
 The sfMultipleImageUploadPlugin features are:
 
 * A gallery can be attached to any module.
-* The plugin builds only a thumbnail (not three) and has no frontend module.
-* The image management has been improved.
-	* The changed name of duplicated images is stored in the database.
-	* Deleting an image deletes his thumbnail as well.
+* The plugin builds only a thumbnail and has no frontend module (yes, this is a feature, you are a developper, right?)
+* The changed name of duplicated images is now stored in the database.
+* Deleting an image deletes the thumbnail as well.
 * Added spanish translation.
+
+
+TO-DO:
+
+* Add an explanation about attaching a gallery to another module
+* Simplify and refactorize the code
+* Make the plugin play with sfJqueryReloadedPlugin, to avoid collisions with other jQuery libraries
+* Use optionally sfImageTransformPlugin and sfImageTransformExtraPlugin for thumbnails
+* Change the order of the images in the gallery with jQuery UI Draggable
+* Install in foreign modules with a command line
+* Convert to a Symfony2 bundle
+
 
 Internationalization supports
 -----------------------------
@@ -22,12 +33,15 @@ Requirements
 
 To manipulate pictures, you have to install on your server the GD library or imagemagick
 
+License
+-------
+
+Please check the LICENSE file
+
 Installation
 ------------
 
-In order to install the plugin sfMultipleImageUploadPlugin
-
-	Download from GitHub, either with git or the package
+In order to install the plugin sfMultipleImageUploadPlugin, download from GitHub, either with git or the package.
 
 Add in config/ProjectConfiguration.class.php the line:
 
@@ -41,24 +55,20 @@ Then clear the cache
 
 	$ php symfony cc
 
-Enable the gallery and photos module in the backend (or whatever you named it).
+Enable the gallery and photos module in you settings.yml of the backend. Ex: /apps/backend/config/settings.yml
 
-	/apps/backend/settings.yml
+You have to enter these lines if they doesn't already exist:
 
-You have to enter if it doesn't already exist this line
-	
 	all:  
 	  .settings:
 	    enabled_modules: [gallery, photos]
 
-If it does exists, you just have to add in the list the gallery module like below :
+If they do exists, you just have to add in the list the gallery module like below :
 
- 	all:  
+  all:  
 	  .settings:
 	    enabled_modules: [myOthersModule, gallery, photos]
 
-You can now access to the gallery and get its awesome functionnalities.
-The plugin use an extern library (GD is set by default but you can totally use imagemagick instead) in order to save your photos in 4 widths {50px, 150px, 300px, orignal size} and copy the thumbnail in the /uploads/gallery/thumbnail directory, automatically created
-if your upload directory, defined by the symfony configuration sf_upload_dir is different that the default one (/upload), you juste have to create the "thumbnail" dir in the correct directory.
-
-[TO-DO: Add explanation about attaching a gallery to another module]
+You can now access the gallery through the backend.
+The plugin use an external library (GD is set by default but you can use imagemagick instead) in order to save the thumbnail (50px width) and copy the thumbnail in the /uploads/gallery/thumbnail directory, automatically created
+if your upload directory, defined by the symfony configuration sf_upload_dir is different than the default one (/upload), you just have to create the "thumbnail" dir in the correct directory.
