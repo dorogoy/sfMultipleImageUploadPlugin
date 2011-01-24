@@ -65,8 +65,8 @@ You have to enter these lines if they doesn't already exist:
 
 If they do exists, you just have to add in the list the gallery module like below :
 
-  all:  
-	  .settings:
+	all:  
+    .settings:
 	    enabled_modules: [myOthersModule, gallery, photos]
 
 You can now access the gallery through the backend.
